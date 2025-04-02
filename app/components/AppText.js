@@ -7,7 +7,7 @@ function AppText({ children, style }) {
 
 const styles = StyleSheet.create({
   text: {
-    fontSize: 20,
+    fontSize: 18,
     fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
   },
 });
