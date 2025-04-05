@@ -50,10 +50,6 @@ expo start
 
 Use the Expo Go app to scan the QR code or launch it in your emulator.
 
-## 📸 Screenshots
-
-_Add screenshots here if you'd like to show off the app interface._
-
 ## 📂 Folder Structure
 
 ```
