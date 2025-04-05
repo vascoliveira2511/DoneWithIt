@@ -50,10 +50,6 @@ expo start
 
 Use the Expo Go app to scan the QR code or launch it in your emulator.
 
-## 🧪 Testing
-
-You can use tools like Postman or Insomnia to test API endpoints. The project assumes a backend is running and accessible (check `/api` configuration).
-
 ## 📸 Screenshots
 
 _Add screenshots here if you'd like to show off the app interface._
@@ -71,10 +67,6 @@ _Add screenshots here if you'd like to show off the app interface._
 ├── App.js            # Entry point
 └── README.md         # This file
 ```
-
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
