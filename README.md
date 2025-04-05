@@ -1,3 +1,4 @@
+
 # DoneWithIt
 
 A simple marketplace app built with React Native and Expo, allowing users to list and browse items for sale. Ideal for learning the fundamentals of mobile development, UI/UX design, and handling image uploads, form validation, and user authentication.
@@ -33,3 +34,48 @@ A simple marketplace app built with React Native and Expo, allowing users to lis
 ```bash
 git clone https://github.com/vascoliveira2511/DoneWithIt.git
 cd DoneWithIt
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Run the app:
+
+```bash
+expo start
+```
+
+Use the Expo Go app to scan the QR code or launch it in your emulator.
+
+## 🧪 Testing
+
+You can use tools like Postman or Insomnia to test API endpoints. The project assumes a backend is running and accessible (check `/api` configuration).
+
+## 📸 Screenshots
+
+_Add screenshots here if you'd like to show off the app interface._
+
+## 📂 Folder Structure
+
+```
+/
+├── app/              # Main application code
+│   ├── components/   # Reusable components
+│   ├── screens/      # Screen components
+│   ├── config/       # App configuration (API, themes, etc.)
+│   └── hooks/        # Custom React hooks
+├── assets/           # Images and static resources
+├── App.js            # Entry point
+└── README.md         # This file
+```
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+---
+
+Made with ❤️ by [Vasco Oliveira](https://github.com/vascoliveira2511)
