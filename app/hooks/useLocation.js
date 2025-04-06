@@ -14,7 +14,6 @@ export default useLocation = () => {
       setLocation({ latitude, longitude });
     } catch (error) {
       console.error("Error getting location:", error);
-      setLocation(null); // Handle the error case
     }
   };
 
