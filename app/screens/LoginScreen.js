@@ -1,48 +1,42 @@
 import React from "react";
-
 import { StyleSheet, Image } from "react-native";
 import * as Yup from "yup";
 
-import { Form, FormField, SubmitButton } from "../components/forms";
 import Screen from "../components/Screen";
+import { Form, FormField, SubmitButton } from "../components/forms";
 
 const validationSchema = Yup.object().shape({
-  email: Yup.string()
-    .required("Email is required")
-    .email("Invalid email")
-    .label("Email"),
-  password: Yup.string()
-    .required("Password is required")
-    .min(4, "Password must be at least 4 characters")
-    .label("Password"),
+  email: Yup.string().required().email().label("Email"),
+  password: Yup.string().required().min(4).label("Password"),
 });
 
 function LoginScreen(props) {
   return (
     <Screen style={styles.container}>
       <Image style={styles.logo} source={require("../assets/logo-red.png")} />
+
       <Form
         initialValues={{ email: "", password: "" }}
         onSubmit={(values) => console.log(values)}
         validationSchema={validationSchema}
       >
         <FormField
-          icon="email"
-          placeholder="Email"
           autoCapitalize="none"
           autoCorrect={false}
+          icon="email"
           keyboardType="email-address"
           name="email"
+          placeholder="Email"
           textContentType="emailAddress"
         />
         <FormField
-          icon="lock"
-          placeholder="Password"
           autoCapitalize="none"
           autoCorrect={false}
+          icon="lock"
           name="password"
-          textContentType="password"
+          placeholder="Password"
           secureTextEntry
+          textContentType="password"
         />
         <SubmitButton title="Login" />
       </Form>

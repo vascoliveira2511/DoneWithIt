@@ -3,18 +3,16 @@ import {
   View,
   StyleSheet,
   TouchableWithoutFeedback,
-  Button,
   Modal,
+  Button,
   FlatList,
 } from "react-native";
-
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
+import Text from "./Text";
 import defaultStyles from "../config/styles";
-import AppText from "./Text";
-import Screen from "./Screen";
 import PickerItem from "./PickerItem";
-import AppButton from "./Button";
+import Screen from "./Screen";
 
 function AppPicker({
   icon,
@@ -41,10 +39,11 @@ function AppPicker({
             />
           )}
           {selectedItem ? (
-            <AppText style={styles.text}>{selectedItem.label}</AppText>
+            <Text style={styles.text}>{selectedItem.label}</Text>
           ) : (
-            <AppText style={styles.placeholder}>{placeholder}</AppText>
+            <Text style={styles.placeholder}>{placeholder}</Text>
           )}
+
           <MaterialCommunityIcons
             name="chevron-down"
             size={20}
@@ -64,8 +63,8 @@ function AppPicker({
                 item={item}
                 label={item.label}
                 onPress={() => {
-                  onSelectItem(item);
                   setModalVisible(false);
+                  onSelectItem(item);
                 }}
               />
             )}
@@ -86,7 +85,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginRight: 10,
-    alignSelf: "center",
   },
   placeholder: {
     color: defaultStyles.colors.medium,
