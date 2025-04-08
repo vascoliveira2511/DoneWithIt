@@ -29,6 +29,13 @@ const styles = StyleSheet.create({
     height: 80,
     justifyContent: "center",
     width: 80,
+    alignSelf: "center",
+    shadowColor: colors.black,
+    shadowOffset: { width: 0, height: 7 },
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+    elevation: 15,
+    bottom: 40,
   },
 });
 

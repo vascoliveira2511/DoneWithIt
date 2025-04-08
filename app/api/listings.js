@@ -25,6 +25,9 @@ export const addListing = (listing, onUploadProgress) => {
   return client.post(endpoint, data, {
     onUploadProgress: (progress) =>
       onUploadProgress(progress.loaded / progress.total),
+    headers: {
+      "Content-Type": "multipart/form-data",
+    },
   });
 };
 
