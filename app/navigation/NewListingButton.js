@@ -1,12 +1,12 @@
 import React from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Platform } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import colors from "../config/colors";
 
 function NewListingButton({ onPress }) {
   return (
-    <TouchableOpacity onPress={onPress}>
+    <TouchableOpacity onPress={onPress} activeOpacity={0.7}>
       <View style={styles.container}>
         <MaterialCommunityIcons
           name="plus-circle"
@@ -21,21 +21,26 @@ function NewListingButton({ onPress }) {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    justifyContent: "center",
     backgroundColor: colors.primary,
-    borderColor: colors.white,
+    width: 80,
+    height: 80,
     borderRadius: 40,
     borderWidth: 10,
-    bottom: 20,
-    height: 80,
-    justifyContent: "center",
-    width: 80,
+    borderColor: colors.white,
     alignSelf: "center",
-    shadowColor: colors.black,
-    shadowOffset: { width: 0, height: 7 },
-    shadowOpacity: 0.43,
-    shadowRadius: 9.51,
-    elevation: 15,
     bottom: 40,
+    ...Platform.select({
+      ios: {
+        shadowColor: colors.black,
+        shadowOffset: { width: 0, height: 7 },
+        shadowOpacity: 0.3,
+        shadowRadius: 6,
+      },
+      android: {
+        elevation: 12,
+      },
+    }),
   },
 });
 
