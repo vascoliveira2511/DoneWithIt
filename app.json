@@ -4,13 +4,12 @@
     "slug": "donewithit",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
-      "image": "./app/assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "image": "./app/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#e63c4b"
     },
     "ios": {
       "supportsTablet": true
@@ -35,6 +34,7 @@
     },
     "updates": {
       "url": "https://u.expo.dev/a74e8d13-cde4-4f29-956b-1d80b8c3268e"
-    }
+    },
+    "plugins": ["expo-secure-store"]
   }
 }
