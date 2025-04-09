@@ -11,11 +11,11 @@ export const addListing = (listing, onUploadProgress) => {
   data.append("categoryId", listing.category.value);
   data.append("description", listing.description);
 
-  listing.images.forEach((image, index) =>
+  listing.images.forEach((uri, index) =>
     data.append("images", {
       name: "image" + index,
       type: "image/jpeg",
-      uri: image,
+      uri,
     })
   );
 

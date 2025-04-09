@@ -88,9 +88,12 @@ function ListingEditScreen() {
   const handleSubmit = async (listing, { resetForm }) => {
     setProgress(0);
     setUploadVisible(true);
+
     const result = await listingsApi.addListing(
       { ...listing, location },
-      (progress) => setProgress(progress)
+      (progress) => {
+        setProgress(progress);
+      }
     );
 
     if (!result.ok) {
@@ -99,6 +102,9 @@ function ListingEditScreen() {
     }
 
     resetForm();
+
+    await new Promise((res) => setTimeout(res, 1500));
+    setUploadVisible(false);
   };
 
   return (
