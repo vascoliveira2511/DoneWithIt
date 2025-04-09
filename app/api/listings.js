@@ -19,15 +19,17 @@ export const addListing = (listing, onUploadProgress) => {
     })
   );
 
-  if (listing.location)
-    data.append("location", JSON.stringify(listing.location));
+  if (listing.location) {
+    data.append("location[latitude]", listing.location.latitude);
+    data.append("location[longitude]", listing.location.longitude);
+  }
 
   return client.post(endpoint, data, {
-    onUploadProgress: (progress) =>
-      onUploadProgress(progress.loaded / progress.total),
     headers: {
       "Content-Type": "multipart/form-data",
     },
+    onUploadProgress: (progress) =>
+      onUploadProgress(progress.loaded / progress.total),
   });
 };
 

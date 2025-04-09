@@ -6,6 +6,11 @@ function ActivityIndicator({ visible = false }) {
 
   return (
     <LottieView
+      style={{
+        position: "absolute",
+        alignSelf: "center",
+        top: 300,
+      }}
       autoPlay
       loop
       source={require("../assets/animations/loader.json")}
