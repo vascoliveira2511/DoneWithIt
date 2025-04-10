@@ -6,6 +6,7 @@ import colors from "../config/colors";
 import ListItem from "../components/lists/ListItem";
 import ContactSellerForm from "../components/ContactSellerForm";
 import Text from "../components/Text";
+import Screen from "../components/Screen";
 
 function ListingDetailsScreen({ route }) {
   const listing = route.params;
@@ -32,9 +33,9 @@ function ListingDetailsScreen({ route }) {
               subTitle="5 Listings"
             />
           </View>
-        </View>
 
-        <ContactSellerForm listing={listing} />
+          <ContactSellerForm listing={listing} />
+        </View>
       </View>
     </KeyboardAvoidingView>
   );

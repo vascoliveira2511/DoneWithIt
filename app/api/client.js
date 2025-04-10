@@ -3,7 +3,7 @@ import cache from "../utility/cache";
 import authStorage from "../auth/storage";
 
 const apiClient = create({
-  baseURL: "http://10.110.34.75:9000/api",
+  baseURL: "http://192.168.205.1:9000/api",
   timeout: 5000,
 });
 
