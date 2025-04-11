@@ -19,11 +19,14 @@
     "@react-navigation/native-stack": "^7.3.9",
     "@react-navigation/stack": "^7.2.9",
     "apisauce": "^3.1.1",
+    "dayjs": "^1.11.13",
     "expo": "^52.0.44",
     "expo-blur": "~14.0.3",
     "expo-constants": "~17.0.8",
+    "expo-device": "~7.0.3",
     "expo-image-picker": "~16.0.6",
     "expo-location": "~18.0.10",
+    "expo-notifications": "~0.29.14",
     "expo-permissions": "^14.4.0",
     "expo-secure-store": "~14.0.1",
     "expo-splash-screen": "~0.29.22",
@@ -44,8 +47,10 @@
     "react-native-screens": "~4.4.0",
     "react-native-web": "~0.19.13",
     "yup": "^1.6.1",
-    "expo-notifications": "~0.29.14",
-    "expo-device": "~7.0.3"
+    "@bugsnag/expo": "^52.0.0",
+    "expo-application": "~6.0.2",
+    "expo-crypto": "~14.0.2",
+    "expo-file-system": "~18.0.12"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

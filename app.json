@@ -3,17 +3,16 @@
     "name": "donewithit",
     "slug": "donewithit",
     "version": "1.0.0",
+    "icon": "./app/assets/icon.png",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
     "assetBundlePatterns": ["**/*"],
     "newArchEnabled": true,
-
     "splash": {
       "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#e63c4b"
     },
-
     "ios": {
       "supportsTablet": true,
       "splash": {
@@ -22,39 +21,50 @@
         "backgroundColor": "#e63c4b"
       }
     },
-
     "android": {
       "useNextNotificationsApi": true,
-      "adaptiveIcon": {
-        "foregroundImage": "./app/assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
       "splash": {
         "image": "./app/assets/splash.png",
         "resizeMode": "contain",
         "backgroundColor": "#e63c4b"
-      }
+      },
+      "package": "com.plateau.donewithit",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "READ_CONTACTS"
+      ],
+      "versionCode": 1
     },
-
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-
     "extra": {
       "eas": {
         "projectId": "a74e8d13-cde4-4f29-956b-1d80b8c3268e"
+      },
+      "bugsnag": {
+        "apiKey": "8364b0719affda62de16a59027b22208"
       }
     },
-
     "owner": "plateau",
     "runtimeVersion": {
       "policy": "appVersion"
     },
-
     "updates": {
       "url": "https://u.expo.dev/a74e8d13-cde4-4f29-956b-1d80b8c3268e"
     },
-
-    "plugins": ["expo-secure-store"]
+    "plugins": ["expo-secure-store"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "@bugsnag/expo/hooks/post-publish.js",
+          "config": {}
+        }
+      ]
+    }
   }
 }
